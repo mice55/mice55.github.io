@@ -1,36 +1,4 @@
-<!doctype html>
-
-<title>CodeMirror: Diff mode</title>
-<meta charset="utf-8"/>
-<link rel=stylesheet href="../../doc/docs.css">
-
-<link rel="stylesheet" href="../../lib/codemirror.css">
-<script src="../../lib/codemirror.js"></script>
-<script src="diff.js"></script>
-<style>
-      .CodeMirror {border-top: 1px solid #ddd; border-bottom: 1px solid #ddd;}
-      span.cm-meta {color: #a0b !important;}
-      span.cm-error { background-color: black; opacity: 0.4;}
-      span.cm-error.cm-string { background-color: red; }
-      span.cm-error.cm-tag { background-color: #2b2; }
-    </style>
-<div id=nav>
-  <a href="http://codemirror.net" target="_blank" rel="noopener"><h1>CodeMirror</h1><img id=logo src="../../doc/logo.png"></a>
-
-  <ul>
-    <li><a href="../../index.html">Home</a>
-    <li><a href="../../doc/manual.html">Manual</a>
-    <li><a href="https://github.com/codemirror/codemirror" target="_blank" rel="noopener">Code</a>
-  </ul>
-  <ul>
-    <li><a href="../index.html">Language modes</a>
-    <li><a class=active href="#">Diff</a>
-  </ul>
-</div>
-
-<article>
-<h2>Diff mode</h2>
-<form><textarea id="code" name="code">
+<!doctype html><title>CodeMirror: Diff mode</title><meta charset="utf-8"><link rel="stylesheet" href="../../doc/docs.css"><link rel="stylesheet" href="../../lib/codemirror.css"><script src="../../lib/codemirror.js"></script><script src="diff.js"></script><style>.CodeMirror{border-top:1px solid #ddd;border-bottom:1px solid #ddd}span.cm-meta{color:#a0b!important}span.cm-error{background-color:#000;opacity:.4}span.cm-error.cm-string{background-color:red}span.cm-error.cm-tag{background-color:#2b2}</style><div id="nav"><a href="http://codemirror.net" target="_blank" rel="noopener"><h1>CodeMirror</h1><img id="logo" src="../../doc/logo.png"></a><ul><li><a href="../../index.html">Home</a></li><li><a href="../../doc/manual.html">Manual</a></li><li><a href="https://github.com/codemirror/codemirror" target="_blank" rel="noopener">Code</a></li></ul><ul><li><a href="../index.html">Language modes</a></li><li><a class="active" href="#">Diff</a></li></ul></div><article><h2>Diff mode</h2><form><textarea id="code" name="code">
 diff --git a/index.html b/index.html
 index c1d9156..7764744 100644
 --- a/index.html
@@ -44,7 +12,7 @@ index c1d9156..7764744 100644
 +      onGutterClick: function(x){console.log(x);}
        });
      </script>
-   <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"superSample":2,"width":180,"height":360,"position":"right","hOffset":0,"vOffset":-20},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false});</script></body>
+   <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({pluginRootPath:"live2dw/",pluginJsPath:"lib/",pluginModelPath:"assets/",tagMode:!1,debug:!1,model:{scale:1,hHeadPos:.5,vHeadPos:.618,jsonPath:"/live2dw/assets/z16.model.json"},display:{superSample:2,width:180,height:360,position:"right",hOffset:0,vOffset:-20},mobile:{show:!0,scale:.5},react:{opacityDefault:.7,opacityOnHover:.2},log:!1})</script>
 diff --git a/lib/codemirror.js b/lib/codemirror.js
 index 04646a9..9a39cc7 100644
 --- a/lib/codemirror.js
@@ -107,11 +75,4 @@ index 04646a9..9a39cc7 100644
      autoMatchBrackets: false,
      workTime: 200,
      workDelay: 300,
-</textarea></form>
-    <script>
-      var editor = CodeMirror.fromTextArea(document.getElementById("code"), {});
-    </script>
-
-    <p><strong>MIME types defined:</strong> <code>text/x-diff</code>.</p>
-
-  </article>
+</textarea></form><script>var editor=CodeMirror.fromTextArea(document.getElementById("code"),{})</script><p><strong>MIME types defined:</strong> <code>text/x-diff</code>.</p></article>
