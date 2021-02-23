@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>内存的栈区</title>
+      <link href="/2021/02/23/nei-cun-de-zhan-qu/"/>
+      <url>/2021/02/23/nei-cun-de-zhan-qu/</url>
+      
+        <content type="html"><![CDATA[<p>栈区：由编译器自动分配释放，存放函数的参数值、局部变量等<br>注意事项：不要返回局部变量的地址，栈区开辟的数据由编译器自动释放</p><pre class="line-numbers language-C++"><code class="language-C++">#include <iostream>using namespace std;int* func(){    int a = 10;    return &a;}int main(){    int * p = func();    cout << *p << endl;    cout << *p << endl;}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre><code>运行结果：10267955168</code></pre><p>此时说明在第一次打印*p时编译器保留了局部变量a<br>但在第二次打印时数据不再保留<br>所以永远不要去返回局部变量的地址，形参数据也不要尝试返回它的地址</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 编程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>内存的全局区</title>
       <link href="/2021/02/21/nei-cun-de-quan-ju-qu/"/>
       <url>/2021/02/21/nei-cun-de-quan-ju-qu/</url>
