@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>内存的堆区</title>
+      <link href="/2021/02/23/nei-cun-de-dui-qu/"/>
+      <url>/2021/02/23/nei-cun-de-dui-qu/</url>
+      
+        <content type="html"><![CDATA[<p>堆区：由程序员分配释放，若程序员不释放，程序结束时由操作系统回收<br>在C++中主要用new开辟内存<br>示例：</p><pre class="line-numbers language-C++"><code class="language-C++">#include <iostream>using namespace std;//可以利用new关键字将数据开辟到栈区int * func(){    int * p = new int(10); //new关键字会返回开辟到栈区的数据的地址，这时我们可以用指针来接收它    return p; //返回的指针自身本身是个局部变量，在栈区}int main(){    int * p = func();    cout << *p << endl;    cout << *p << endl;    cout << *p << endl;    cout << *p << endl;}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre><code>运行结果：10101010</code></pre><p>结果说明：只要不去主动释放堆区数据（代码释放或结束程序）它就会一直存在。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 编程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>内存的栈区</title>
       <link href="/2021/02/23/nei-cun-de-zhan-qu/"/>
       <url>/2021/02/23/nei-cun-de-zhan-qu/</url>
