@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>引用的基本使用</title>
+      <link href="/2021/02/25/yin-yong-de-ji-ben-shi-yong/"/>
+      <url>/2021/02/25/yin-yong-de-ji-ben-shi-yong/</url>
+      
+        <content type="html"><![CDATA[<p>引用的作用：给变量起别名<br><br>语法：数据类型 &amp;别名 = 原名<br><br>示例：</p><pre class="line-numbers language-c++"><code class="language-c++">#include <iostream>using namespace std;int main(){    int a = 10;    int& b = a;    cout << a << endl;    cout << b << endl;    b = 100;    cout << a << endl;    cout << b << endl;}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>运行结果：</p><pre class="line-numbers language-text"><code class="language-text">1010100100<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> C++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>C++中的new运算符</title>
       <link href="/2021/02/24/c-zhong-de-new-yun-suan-fu/"/>
       <url>/2021/02/24/c-zhong-de-new-yun-suan-fu/</url>
