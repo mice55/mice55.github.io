@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>引用的注意事项</title>
+      <link href="/2021/02/25/yin-yong-de-zhu-yi-shi-xiang/"/>
+      <url>/2021/02/25/yin-yong-de-zhu-yi-shi-xiang/</url>
+      
+        <content type="html"><![CDATA[<p>引用的注意事项：  </p><ol><li>引用必须要初始化<br>示例：<ul><li>错误写法<pre class="line-numbers language-c++"><code class="language-c++">int a = 5;int &b; <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li><li>正确写法<pre class="line-numbers language-c++"><code class="language-c++">int a = 5;int &b = 5;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li></ul></li><li>引用一旦初始化后，就不可以更改<br>示例：<pre class="line-numbers language-c++"><code class="language-c++"> int a = 5; int c = 6; int &b = a; b = c; //这个操作实际上是把变量c的值赋值给变量a，而不是引用c<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> C++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>引用的基本使用</title>
       <link href="/2021/02/25/yin-yong-de-ji-ben-shi-yong/"/>
       <url>/2021/02/25/yin-yong-de-ji-ben-shi-yong/</url>
