@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>引用做函数参数</title>
+      <link href="/2021/02/26/yin-yong-zuo-han-shu-can-shu/"/>
+      <url>/2021/02/26/yin-yong-zuo-han-shu-can-shu/</url>
+      
+        <content type="html"><![CDATA[<p>当我们想利用形参修饰实参，值传递是做不到的，而可以做到这种操作的，由地址传递和引用传递，在某些情况下，引用传递可以简化指针修改实参，易于使用。<br>示例：  </p><pre class="line-numbers language-c++"><code class="language-c++">#include <iostream>void swap01(int& a, int& b){    int temp = a;    a = b;    b = temp;}int main(){    int a = 5;    int b = 10;    std::swap(a, b);    std::cout << "a = " << a << std::endl << "b = " << b << std::endl;}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> C++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>引用的注意事项</title>
       <link href="/2021/02/25/yin-yong-de-zhu-yi-shi-xiang/"/>
       <url>/2021/02/25/yin-yong-de-zhu-yi-shi-xiang/</url>
