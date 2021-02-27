@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>引用做函数返回值</title>
+      <link href="/2021/02/27/yin-yong-zuo-han-shu-fan-hui-zhi/"/>
+      <url>/2021/02/27/yin-yong-zuo-han-shu-fan-hui-zhi/</url>
+      
+        <content type="html"><![CDATA[<p>作用：引用是可以作为函数的返回值存在的<br>注意：不要返回局部变量引用(与之前的”不要返回局部变量的地址”)的原因一样<br>用法：函数调用作为左值<br>示例：  </p><pre class="line-numbers language-c++"><code class="language-c++">#include <iostream>using namespace std;int& test01(){    static int a = 10;    return a;}int main(){    int& a = test01();    cout << a << endl;    cout << a << endl;    test01() = 1000;    cout << a << endl;    cout << a << endl;    a = 2000;    cout << a << endl;    cout << a << endl;}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>运行结果：  </p><pre class="line-numbers language-text"><code class="language-text">10101000100020002000<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> C++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>引用做函数参数</title>
       <link href="/2021/02/26/yin-yong-zuo-han-shu-can-shu/"/>
       <url>/2021/02/26/yin-yong-zuo-han-shu-can-shu/</url>
