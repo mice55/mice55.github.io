@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>引用的本质</title>
+      <link href="/2021/03/01/yin-yong-de-ben-zhi/"/>
+      <url>/2021/03/01/yin-yong-de-ben-zhi/</url>
+      
+        <content type="html"><![CDATA[<p>本质：引用的本质在C++内部实现是一个指针常量<br>示例：  </p><pre class="line-numbers language-c++"><code class="language-c++">#include <iostream>using namespace std;void func(int& ref){    ref = 100; //*ref = 100;}int main(){    int a = 10;    int& ref = a;    //int* const ref = &a;    ref = 20;    //*ref = 20;    cout << "a:" << a << endl;    cout << "ref:" << ref << endl;    func(a);    return 0;}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> C++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>引用做函数返回值</title>
       <link href="/2021/02/27/yin-yong-zuo-han-shu-fan-hui-zhi/"/>
       <url>/2021/02/27/yin-yong-zuo-han-shu-fan-hui-zhi/</url>
