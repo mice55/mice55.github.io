@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>函数的默认参数</title>
+      <link href="/2021/03/01/han-shu-de-mo-ren-can-shu/"/>
+      <url>/2021/03/01/han-shu-de-mo-ren-can-shu/</url>
+      
+        <content type="html"><![CDATA[<p>在C++中，函数的形参列表中的形参是可以有默认值的。<br>语法：<code>返回值类型 函数名 (参数= 默认值) {}</code><br>示例：  </p><pre class="line-numbers language-c++"><code class="language-c++">#include <iostream>using namespace std;int func(int a = 10, int b = 5, int c = 1) {    return a + b + c;}int main(){    int a = func();    cout << a << endl;}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>运行结果：  </p><pre class="line-numbers language-text"><code class="language-text">16<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> C++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>常量引用</title>
       <link href="/2021/03/01/chang-liang-yin-yong/"/>
       <url>/2021/03/01/chang-liang-yin-yong/</url>
