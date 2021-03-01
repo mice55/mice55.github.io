@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>常量引用</title>
+      <link href="/2021/03/01/chang-liang-yin-yong/"/>
+      <url>/2021/03/01/chang-liang-yin-yong/</url>
+      
+        <content type="html"><![CDATA[<p>作用：常量引用主要用来修饰形参，防止误操作<br>在函数形参列表中，可以加const修饰形参，防止形参改变实参<br>示例：  </p><pre class="line-numbers language-c++"><code class="language-c++">#include <iostream>using namespace std;void printValue(const int& value){    cout << value << endl;}int main(){    int a = 10;    printValue(a);}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> C++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>引用的本质</title>
       <link href="/2021/03/01/yin-yong-de-ben-zhi/"/>
       <url>/2021/03/01/yin-yong-de-ben-zhi/</url>
