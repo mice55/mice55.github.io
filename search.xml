@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>函数的占位参数</title>
+      <link href="/2021/03/02/han-shu-de-zhan-wei-can-shu/"/>
+      <url>/2021/03/02/han-shu-de-zhan-wei-can-shu/</url>
+      
+        <content type="html"><![CDATA[<p>C++函数的形参列表里可以有占位参数，用来做占位，调用函数时必须填补该位置<br>语法：返回值类型 函数名 (数据类型){}<br>示例：  </p><pre class="line-numbers language-c++"><code class="language-c++">#include <iostream>using namespace std;void func(int a, int) {    cout << "This is a func" << endl;}int main(){    func(10, 10);}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> C++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>函数的默认参数</title>
       <link href="/2021/03/01/han-shu-de-mo-ren-can-shu/"/>
       <url>/2021/03/01/han-shu-de-mo-ren-can-shu/</url>
