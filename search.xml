@@ -4,9 +4,34 @@
   
     
     <entry>
+      <title>函数重载-注意事项</title>
+      <link href="/2021/03/04/han-shu-chong-zai-zhu-yi-shi-xiang/"/>
+      <url>/2021/03/04/han-shu-chong-zai-zhu-yi-shi-xiang/</url>
+      
+        <content type="html"><![CDATA[<p><strong>注意事项</strong>：  </p><ol><li>引用作为重载的条件<br>示例：<pre class="line-numbers language-c++"><code class="language-c++"> #include <iostream> using namespace std; void func(const int &a)  {     cout << "This is func(const int &a)" << endl; } void func(int &a) {     cout << "This is func(int a)" <<endl; } int main() {     int a = 10;     func(a); //此时会输出"This is func(int a)"     func(10); //此时会输出"This is func(const int &a)",如果用const修饰的int变量引入与此等效 }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li><li>函数重载碰到默认参数<br>示例：  <pre class="line-numbers language-c++"><code class="language-c++"> #include <iostream> using namespace std; void func(int a,int b = 10)  {     cout << "This is func(int a,int b = 10)" << endl; } void func(int a) {     cout << "This is func(int a)" <<endl; } int main() {     //func(10); //此行会报编译错误，因为函数会出现二义性导致编译器无法判断到底执行哪一个函数     func(10, 20); }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> C++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>函数重载</title>
-      <link href="/2021/03/02/han-shu-chong-zai/"/>
-      <url>/2021/03/02/han-shu-chong-zai/</url>
+      <link href="/2021/03/02/han-shu-chong-zai-ji-ben-yu-fa/"/>
+      <url>/2021/03/02/han-shu-chong-zai-ji-ben-yu-fa/</url>
       
         <content type="html"><![CDATA[<p><strong>作用</strong>：函数名可以相同，提高复用性<br><strong>函数重载满足条件：</strong>  </p><ul><li>在同一个作用域下</li><li>函数名称相同</li><li>函数参数 <strong>类型不同</strong> 或者 <strong>个数不同</strong> 或者 <strong>顺序不同</strong>  </li></ul><p><strong>注意</strong>：函数的返回值不可以作为函数重载的条件<br><strong>示例</strong>：  </p><pre class="line-numbers language-c++"><code class="language-c++">#include <iostream>using namespace std;void func(int a, int b) {    cout << "This is a func" << a << b << endl;}void func(int a){    cout << "This is a func" << a << endl;}int main(){    func(123, 456);    func(789012);}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
       
