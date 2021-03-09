@@ -8,9 +8,21 @@
       <link href="/2021/03/09/lei-he-dui-xiang-feng-zhuang-fang-wen-quan-xian/"/>
       <url>/2021/03/09/lei-he-dui-xiang-feng-zhuang-fang-wen-quan-xian/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<p>访问权限有三种：<br>public &ensp;&nbsp;&nbsp;&nbsp;&nbsp;公共权限 成员 类内可以访问 类外可以访问<br>protected 保护权限 成员 类内可以访问 类外不可以访问  子类可以访问父类的保护内容<br>private &ensp;&ensp;&nbsp;私有权限 成员 类内可以访问 类外不可以访问 子类不可以访问父类的保护内容<br>示例：  </p><pre class="line-numbers language-c++"><code class="language-c++">#include <iostream>#include <string>using namespace std;class Person{public:    string m_Name;protected:    string m_Car;private:    int passwd;public:    void func()    {        m_Name = "张三";        m_Car = "垃圾车";        passwd = 123456;    }};int main(){    Person p1;    p1.m_Name = "李四";    //p1.m_Car = "自行车"; 保护权限内容,类外禁止访问    //p1.passwd = 159756; 私有权限内容,类外禁止访问}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
       
       
+      <categories>
+          
+          <category> C++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
       
     </entry>
     
