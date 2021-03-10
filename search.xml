@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>类和对象-封装-C++中class和struct的区别</title>
+      <link href="/2021/03/10/lei-he-dui-xiang-feng-zhuang-c-zhong-class-he-struct-de-qu-bie/"/>
+      <url>/2021/03/10/lei-he-dui-xiang-feng-zhuang-c-zhong-class-he-struct-de-qu-bie/</url>
+      
+        <content type="html"><![CDATA[<p>在C++中struct和class的<strong>唯一区别</strong>就在于<strong>默认访问权限不同</strong><br>区别：  </p><ul><li>class的默认权限为私有</li><li>struct的默认权限为公共</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> C++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>类和对象-封装-访问权限</title>
       <link href="/2021/03/09/lei-he-dui-xiang-feng-zhuang-fang-wen-quan-xian/"/>
       <url>/2021/03/09/lei-he-dui-xiang-feng-zhuang-fang-wen-quan-xian/</url>
