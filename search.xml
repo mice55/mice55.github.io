@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>类和对象-封装-成员属性私有化</title>
+      <link href="/2021/03/11/lei-he-dui-xiang-feng-zhuang-cheng-yuan-shu-xing-si-you-hua/"/>
+      <url>/2021/03/11/lei-he-dui-xiang-feng-zhuang-cheng-yuan-shu-xing-si-you-hua/</url>
+      
+        <content type="html"><![CDATA[<p>优点一：将所有成员属性设置为私有，可以自己控制读写权限<br>优点二：对于写权限，我们可以检测数据的有效性<br>示例：</p><pre class="line-numbers language-c++"><code class="language-c++">class Person{public:    int GetRO() //只读    {        return ro;    }    int SetWO(int value) //只写    {        wo = value;    }    int SetRW(int value) //可读写    {        rw = value;    }    int GetRW() //可读写    {        return rw;    }private:    int ro = 10;    int wo = 10;    int rw = 10;};<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> C++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>类和对象-封装-C++中class和struct的区别</title>
       <link href="/2021/03/10/lei-he-dui-xiang-feng-zhuang-c-zhong-class-he-struct-de-qu-bie/"/>
       <url>/2021/03/10/lei-he-dui-xiang-feng-zhuang-c-zhong-class-he-struct-de-qu-bie/</url>
