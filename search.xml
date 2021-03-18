@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>类和对象-对象特性-拷贝构造函数调用时机</title>
+      <link href="/2021/03/18/lei-he-dui-xiang-dui-xiang-te-xing-kao-bei-gou-zao-han-shu-diao-yong-shi-ji/"/>
+      <url>/2021/03/18/lei-he-dui-xiang-dui-xiang-te-xing-kao-bei-gou-zao-han-shu-diao-yong-shi-ji/</url>
+      
+        <content type="html"><![CDATA[<p>拷贝构造函数调用时机<br>C++中拷贝构造函数调用时机通常有三种情况  </p><ul><li>使用一个已经创建完毕的对象来初始化一个新对象  </li><li>值传递的方式给函数参数传值  </li><li>以值方式返回局部对象<br>示例：  <pre class="line-numbers language-c++"><code class="language-c++">class Person {public:  Person() {      cout << "无参构造函数!" << endl;      mAge = 0;  }  Person(int age) {      cout << "有参构造函数!" << endl;      mAge = age;  }  Person(const Person& p) {      cout << "拷贝构造函数!" << endl;      mAge = p.mAge;  }  //析构函数在释放内存之前调用  ~Person() {      cout << "析构函数!" << endl;  }public:  int mAge;};<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li></ul><p>//1. 使用一个已经创建完毕的对象来初始化一个新对象<br>void test01() {</p><pre><code>Person man(100); //p对象已经创建完毕Person newman(man); //调用拷贝构造函数Person newman2 = man; //拷贝构造//Person newman3;//newman3 = man; //不是调用拷贝构造函数，赋值操作</code></pre><p>}</p><p>//2. 值传递的方式给函数参数传值<br>//相当于Person p1 = p;<br>void doWork(Person p1) {}<br>void test02() {<br>    Person p; //无参构造函数<br>    doWork(p);<br>}</p><p>//3. 以值方式返回局部对象<br>Person doWork2()<br>{<br>    Person p1;<br>    cout &lt;&lt; (int *)&amp;p1 &lt;&lt; endl;<br>    return p1;<br>}</p><p>void test03()<br>{<br>    Person p = doWork2();<br>    cout &lt;&lt; (int *)&amp;p &lt;&lt; endl;<br>}</p><p>int main() {</p><pre><code>//test01();//test02();test03();system(&quot;pause&quot;);return 0;</code></pre><p>}<br>```</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> C++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>类和对象-对象特性-函数的分类以及调用</title>
       <link href="/2021/03/16/lei-he-dui-xiang-dui-xiang-te-xing-han-shu-de-fen-lei-yi-ji-diao-yong/"/>
       <url>/2021/03/16/lei-he-dui-xiang-dui-xiang-te-xing-han-shu-de-fen-lei-yi-ji-diao-yong/</url>
