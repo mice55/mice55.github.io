@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>类和对象-对象特性-this指针的用途</title>
+      <link href="/2021/03/22/lei-he-dui-xiang-dui-xiang-te-xing-this-zhi-zhen-de-yong-tu/"/>
+      <url>/2021/03/22/lei-he-dui-xiang-dui-xiang-te-xing-this-zhi-zhen-de-yong-tu/</url>
+      
+        <content type="html"><![CDATA[<p>通过4.3.1我们知道在C++中成员变量和成员函数是分开存储的</p><p>每一个非静态成员函数只会诞生一份函数实例，也就是说多个同类型的对象会共用一块代码</p><p>那么问题是：这一块代码是如何区分那个对象调用自己的呢？</p><p>c++通过提供特殊的对象指针，this指针，解决上述问题。this指针指向被调用的成员函数所属的对象</p><p>this指针是隐含每一个非静态成员函数内的一种指针</p><p>this指针不需要定义，直接使用即可</p><p>this指针的用途：</p><ul><li><p>当形参和成员变量同名时，可用this指针来区分</p></li><li><p>在类的非静态成员函数中返回对象本身，可使用return *this</p><pre class="line-numbers language-c++"><code class="language-c++">class Person{public:  Person(int age)  {      //1、当形参和成员变量同名时，可用this指针来区分      this->age = age;  }  Person& PersonAddPerson(Person p)  {      this->age += p.age;      //返回对象本身      return *this;  }  int age;};<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li></ul><p>void test01()<br>{<br>    Person p1(10);<br>    cout &lt;&lt; “p1.age = “ &lt;&lt; p1.age &lt;&lt; endl;</p><pre><code>Person p2(10);p2.PersonAddPerson(p1).PersonAddPerson(p1).PersonAddPerson(p1);cout &lt;&lt; &quot;p2.age = &quot; &lt;&lt; p2.age &lt;&lt; endl;</code></pre><p>}</p><p>int main() {</p><pre><code>test01();system(&quot;pause&quot;);return 0;</code></pre><p>}</p><p>```</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> C++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>类和对象-对象特性-构造函数调用规则</title>
       <link href="/2021/03/20/lei-he-dui-xiang-dui-xiang-te-xing-gou-zao-han-shu-diao-yong-gui-ze/"/>
       <url>/2021/03/20/lei-he-dui-xiang-dui-xiang-te-xing-gou-zao-han-shu-diao-yong-gui-ze/</url>
